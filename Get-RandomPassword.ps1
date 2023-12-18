@@ -84,7 +84,7 @@ function Get-RandomPassword{
 
     $Available_languages = New-Object System.Collections.Generic.List[string]
     Get-ChildItem -Directory -Path $PSScriptRoot\ressources | ForEach-Object {
-        $Available_languages.Add($_)
+        $Available_languages.Add($_.Name)
     }
     Write-Verbose "$($Available_languages.Count) languages found"
 
